@@ -1,1 +1,2 @@
 E:\C coding\C# Coding\IndieGameDevelopmentHub\IndieGameDevelopmentHub.Client\obj\Debug\net9.0\staticwebassets.build.json
+C:\MyDrive\School\Dönem_6\CMPE 232\IndieGameDevelopmentHub\IndieGameDevelopmentHub.Client\obj\Debug\net9.0\staticwebassets.build.json

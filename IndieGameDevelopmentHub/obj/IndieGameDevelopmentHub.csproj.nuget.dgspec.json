@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\C coding\\C# Coding\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.csproj": {}
+    "C:\\MyDrive\\School\\Dönem_6\\CMPE 232\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.csproj": {}
   },
   "projects": {
-    "E:\\C coding\\C# Coding\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.Client\\IndieGameDevelopmentHub.Client.csproj": {
+    "C:\\MyDrive\\School\\Dönem_6\\CMPE 232\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.Client\\IndieGameDevelopmentHub.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\C coding\\C# Coding\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.Client\\IndieGameDevelopmentHub.Client.csproj",
+        "projectUniqueName": "C:\\MyDrive\\School\\Dönem_6\\CMPE 232\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.Client\\IndieGameDevelopmentHub.Client.csproj",
         "projectName": "IndieGameDevelopmentHub.Client",
-        "projectPath": "E:\\C coding\\C# Coding\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.Client\\IndieGameDevelopmentHub.Client.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "E:\\C coding\\C# Coding\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.Client\\obj\\",
+        "projectPath": "C:\\MyDrive\\School\\Dönem_6\\CMPE 232\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.Client\\IndieGameDevelopmentHub.Client.csproj",
+        "packagesPath": "C:\\Users\\deniz\\.nuget\\packages\\",
+        "outputPath": "C:\\MyDrive\\School\\Dönem_6\\CMPE 232\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\deniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -58,13 +58,13 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.4, )",
+              "version": "[9.0.3, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.4, )",
+              "version": "[9.0.3, )",
               "autoReferenced": true
             }
           },
@@ -84,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -93,20 +93,20 @@
         }
       }
     },
-    "E:\\C coding\\C# Coding\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.csproj": {
+    "C:\\MyDrive\\School\\Dönem_6\\CMPE 232\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\C coding\\C# Coding\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.csproj",
+        "projectUniqueName": "C:\\MyDrive\\School\\Dönem_6\\CMPE 232\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.csproj",
         "projectName": "IndieGameDevelopmentHub",
-        "projectPath": "E:\\C coding\\C# Coding\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "E:\\C coding\\C# Coding\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub\\obj\\",
+        "projectPath": "C:\\MyDrive\\School\\Dönem_6\\CMPE 232\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.csproj",
+        "packagesPath": "C:\\Users\\deniz\\.nuget\\packages\\",
+        "outputPath": "C:\\MyDrive\\School\\Dönem_6\\CMPE 232\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\deniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -122,8 +122,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "E:\\C coding\\C# Coding\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.Client\\IndieGameDevelopmentHub.Client.csproj": {
-                "projectPath": "E:\\C coding\\C# Coding\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.Client\\IndieGameDevelopmentHub.Client.csproj"
+              "C:\\MyDrive\\School\\Dönem_6\\CMPE 232\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.Client\\IndieGameDevelopmentHub.Client.csproj": {
+                "projectPath": "C:\\MyDrive\\School\\Dönem_6\\CMPE 232\\IndieGameDevelopmentHub\\IndieGameDevelopmentHub.Client\\IndieGameDevelopmentHub.Client.csproj"
               }
             }
           }
@@ -168,7 +168,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

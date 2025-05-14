@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IndieGameDevelopmentHub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fc8a45e6e2fb5b724e764d6decf2ccd25efafa4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+afaa7aad683618eeff72b7f1bc97d9bac0267d85")]
 [assembly: System.Reflection.AssemblyProductAttribute("IndieGameDevelopmentHub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IndieGameDevelopmentHub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
