@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\IndieGameDevelopmentHub.props" />
+</Project>

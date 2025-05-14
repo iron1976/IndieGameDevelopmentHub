@@ -1,0 +1,4 @@
+E:\C coding\C# Coding\IndieGameDevelopmentHub\IndieGameDevelopmentHub.Client\wwwroot\appsettings.Development.json
+E:\C coding\C# Coding\IndieGameDevelopmentHub\IndieGameDevelopmentHub.Client\wwwroot\appsettings.json
+wwwroot\appsettings.Development.json
+wwwroot\appsettings.json
