@@ -1,1 +1,0 @@
-E:\C coding\C# Coding\IndieGameDevelopmentHub\IndieGameDevelopmentHub.Client\obj\Debug\net9.0\staticwebassets.build.json
