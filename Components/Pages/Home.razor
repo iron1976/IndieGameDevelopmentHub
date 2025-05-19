@@ -1,7 +1,182 @@
 ﻿@page "/"
+@inject IndieGameDevelopmentHub.Models.IndieGameDevelopmentHubContext Db
+@using System.ComponentModel.DataAnnotations
+@using System.Diagnostics
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<style>
+    .login-bg {
+    width: 100vw;
+    min-height: 60vh;
+    background: linear-gradient(135deg, #8e2de2 0%, #1a2980 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    }
 
-Welcome to your new app.
+    .login-panel {
+    background: rgba(255,255,255,0.08);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 2.5rem 2rem;
+    width: 350px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    backdrop-filter: blur(8px);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    }
+
+    .login-panel h2 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    }
+
+    .login-panel label {
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    }
+
+    .login-panel input {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    border: none;
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    margin-bottom: 0.7rem;
+    }
+
+    .login-panel input::placeholder {
+    color: #e0e0e0;
+    }
+
+    .login-panel button {
+    background: #8e2de2;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    }
+
+    .login-panel button:hover {
+    background: #1a2980;
+    }
+
+    .validation-message {
+    color: #ffb3b3;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    }
+</style>
+
+<div class="login-bg">
+    <div class="login-panel">
+        <h2>Login</h2>
+        <EditForm Model="@loginModel" OnValidSubmit="HandleLogin">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <label for="email">Email</label>
+            <InputText id="email" @bind-Value="loginModel.Email" placeholder="Enter your email" />
+            <ValidationMessage For="@(() => loginModel.Email)" class="validation-message" />
+
+            <label for="password">Password</label>
+            <InputText id="password" @bind-Value="loginModel.Password" type="password" placeholder="Enter your password" />
+            <ValidationMessage For="@(() => loginModel.Password)" class="validation-message" />
+
+            <button type="submit">Login</button>
+        </EditForm>
+        @if (!string.IsNullOrEmpty(loginMessage))
+        {
+            <div class="validation-message">@loginMessage</div>
+        }
+    </div>
+</div>
+
+@if (testers is null)
+{
+    <div style="
+        width: 100%;
+        min-height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #8e2de2 0%, #1a2980 100%);
+        border-radius: 1rem;
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 600;
+        box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.25);
+        margin: 2rem 0;
+    ">
+        <span>
+            <span class="spinner-border spinner-border-sm" style="margin-right: 0.7rem;" role="status" aria-hidden="true"></span>
+            Loading testers...
+        </span>
+    </div>
+}
+
+else if (testers.Count == 0)
+{
+    <p>No testers found.</p>
+}
+else
+{
+    <ul>
+        @foreach (var tester in testers)
+        {
+            <li>@tester.Id: @tester.Name</li>
+        }
+    </ul>
+}
+
+@code {
+    private List<IndieGameDevelopmentHub.Models.Tester>? testers;
+
+    private LoginModel loginModel = new();
+    private string? loginMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+    }
+
+    private void HandleLogin()
+    {
+        // Replace with real authentication logic
+        if (loginModel.Email == "user@example.com" && loginModel.Password == "password")
+        {
+            loginMessage = "Login successful!";
+        }
+        else
+        {
+            loginMessage = "Invalid email or password.";
+        }
+    }
+
+    [DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
+    public class LoginModel
+    {
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Invalid email address")]
+        public string? Email { get; set; }
+
+        [Required(ErrorMessage = "Password is required")]
+        public string? Password { get; set; }
+
+        private string GetDebuggerDisplay()
+        {
+            return ToString();
+        }
+    }
+}
