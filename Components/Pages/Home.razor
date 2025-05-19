@@ -90,54 +90,62 @@
 
 <div class="login-bg">
     <div class="panel-container">
-        <div class="login-panel">
-            <h2>Login</h2>
-            <EditForm Model="@loginModel" OnValidSubmit="HandleLogin">
-                <DataAnnotationsValidator />
-                <ValidationSummary />
+        <div>
+            <div class="login-panel">
+                <h2>Login</h2>
+                <EditForm Model="@loginModel" OnValidSubmit="HandleLogin" FormName="loginForm">
+                    
 
-                <label for="email">Email</label>
-                <InputText id="email" @bind-Value="loginModel.Email" placeholder="Enter your email" />
-                <ValidationMessage For="@(() => loginModel.Email)" class="validation-message" />
+                    <label for="email">Email</label>
+                    <InputText id="email" @bind-Value="loginModel.Email" placeholder="Enter your email" />
+                    <ValidationMessage For="@(() => loginModel.Email)" class="validation-message" />
 
-                <label for="password">Password</label>
-                <InputText id="password" @bind-Value="loginModel.Password" type="password" placeholder="Enter your password" />
-                <ValidationMessage For="@(() => loginModel.Password)" class="validation-message" />
+                    <label for="password">Password</label>
+                    <InputText id="password" @bind-Value="loginModel.Password" type="password" placeholder="Enter your password" />
+                    <ValidationMessage For="@(() => loginModel.Password)" class="validation-message" />
 
-                <button type="submit">Login</button>
-            </EditForm>
+                    <button type="submit">Login</button>
+                </EditForm>
+            </div>
             @if (!string.IsNullOrEmpty(loginMessage))
             {
-                <div class="validation-message">@loginMessage</div>
+                <div class="error-panel" style="background: rgba(255,0,0,0.08); border-radius: 1.5rem; box-shadow: 0 4px 16px 0 rgba(255,0,0,0.15); padding: 1rem 1.5rem; min-width: 350px; color: #ffb3b3; font-size: 1.05rem; text-align: center; margin-bottom: 1.5rem;">
+                    @loginMessage
+                </div>
             }
         </div>
-        <div class="register-panel">
-            <h2>Register</h2>
-            <EditForm Model="@registerModel" OnValidSubmit="HandleRegister">
-                <DataAnnotationsValidator />
-                <ValidationSummary />
+        <div>
+            <div class="register-panel">
+                <h2>Register</h2>
+                <EditForm Model="@registerModel" OnValidSubmit="HandleRegister" FormName="registerForm">
+                    
 
-                <label for="register-email">Email</label>
-                <InputText id="register-email" @bind-Value="registerModel.Email" placeholder="Enter your email" />
-                <ValidationMessage For="@(() => registerModel.Email)" class="validation-message" />
+                    <label for="register-email">Email</label>
+                    <InputText id="register-email" @bind-Value="registerModel.Email" placeholder="Enter your email" />
+                    <ValidationMessage For="@(() => registerModel.Email)" class="validation-message" />
 
-                <label for="register-password">Password</label>
-                <InputText id="register-password" @bind-Value="registerModel.Password" type="password" placeholder="Enter your password" />
-                <ValidationMessage For="@(() => registerModel.Password)" class="validation-message" />
+                    <label for="register-password">Password</label>
+                    <InputText id="register-password" @bind-Value="registerModel.Password" type="password" placeholder="Enter your password" />
+                    <ValidationMessage For="@(() => registerModel.Password)" class="validation-message" />
 
-                <label for="register-confirm">Confirm Password</label>
-                <InputText id="register-confirm" @bind-Value="registerModel.ConfirmPassword" type="password" placeholder="Confirm your password" />
-                <ValidationMessage For="@(() => registerModel.ConfirmPassword)" class="validation-message" />
+                    <label for="register-confirm">Confirm Password</label>
+                    <InputText id="register-confirm" @bind-Value="registerModel.ConfirmPassword" type="password" placeholder="Confirm your password" />
+                    <ValidationMessage For="@(() => registerModel.ConfirmPassword)" class="validation-message" />
 
-                <button type="submit">Register</button>
-            </EditForm>
+                    <button type="submit">Register</button>
+                </EditForm>
+            </div>
             @if (!string.IsNullOrEmpty(registerMessage))
             {
-                <div class="validation-message">@registerMessage</div>
+                <div class="error-panel" style="background: rgba(255,0,0,0.08); border-radius: 1.5rem; box-shadow: 0 4px 16px 0 rgba(255,0,0,0.15); padding: 1rem 1.5rem; min-width: 350px; color: #ffb3b3; font-size: 1.05rem; text-align: center; margin-bottom: 1.5rem;">
+                    @registerMessage
+                </div>
             }
         </div>
     </div>
 </div>
+
+
 
 @if (testers is null)
 {
@@ -209,7 +217,7 @@ else
             string.IsNullOrWhiteSpace(registerModel.Password) ||
             string.IsNullOrWhiteSpace(registerModel.ConfirmPassword))
         {
-            registerMessage = "All fields are required.";
+            registerMessage = "Invalid email or password.";
             return;
         }
         if (registerModel.Password != registerModel.ConfirmPassword)
