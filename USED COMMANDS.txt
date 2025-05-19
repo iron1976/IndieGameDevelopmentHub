@@ -294,3 +294,5 @@ BEGIN
     INNER JOIN INSERTED I ON R.ReviewID = I.ReviewID
     WHERE I.ReviewDate IS NULL;
 END;
+
+#TEST
