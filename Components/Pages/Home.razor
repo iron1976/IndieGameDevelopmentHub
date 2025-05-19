@@ -113,7 +113,7 @@
         </div>
         <div class="register-panel">
             <h2>Register</h2>
-            <EditForm Model="@registerModel" OnValidSubmit="HandleRegister">
+            <EditForm Model="@registerModel" OnValidSubmit="HandleRegister" FormName="MyUniqueFormName">
                 <DataAnnotationsValidator />
                 <ValidationSummary />
 
